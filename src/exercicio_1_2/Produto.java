@@ -1,5 +1,5 @@
 package exercicio_1_2;
 
-public interface Pizza {
+public interface Produto {
 	public String fazer();
 }

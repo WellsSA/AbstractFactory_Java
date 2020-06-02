@@ -1,6 +1,6 @@
 package exercicio_1_2;
 
-public class PizzariaDelivery implements Fabrica {
+public class CalzoneriaDelivery implements Fabrica {
 
 	public static final int CALABRESA = 1;
 	public static final int PRESUNTO = 2;
@@ -9,9 +9,9 @@ public class PizzariaDelivery implements Fabrica {
 	public Produto getDeliveryInstance(int tipo) {
 		switch (tipo) {
 		case CALABRESA:
-			return new PizzaCalabresa();
+			return new CalzoneCalabresa();
 		case PRESUNTO:
-			return new PizzaPresunto();
+			return new CalzonePresunto();
 		}
 		return null;
 	}
