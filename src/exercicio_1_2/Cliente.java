@@ -12,15 +12,15 @@ public class Cliente {
 		
 		int diaSemana = c.get(Calendar.DAY_OF_WEEK);
 		
-		Fabrica pizzaria = DeliveryProducer.getPizzaria(DeliveryProducer.PIZZARIA);
+		Fabrica fabrica = DeliveryProducer.getFabrica(DeliveryProducer.CALZONERIA);
 		Produto pizza = null;
 		
 		switch(diaSemana) {
 		case 2: case 4: case 6:
-			pizza = pizzaria.getDeliveryInstance(PizzariaDelivery.CALABRESA);
+			pizza = fabrica.getDeliveryInstance(PizzariaDelivery.CALABRESA);
 			break;
 		case 3: case 5: case 7:
-			pizza = pizzaria.getDeliveryInstance(PizzariaDelivery.PRESUNTO);
+			pizza = fabrica.getDeliveryInstance(PizzariaDelivery.PRESUNTO);
 			break;
 		default: 
 			System.out.println("Domingo não tem pizza");

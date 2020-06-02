@@ -8,7 +8,7 @@ public class DeliveryProducer {
 		throw new AssertionError();
 	}
 	
-	public static Fabrica getPizzaria(int tipo) {
+	public static Fabrica getFabrica(int tipo) {
 		switch(tipo) {
 			case PIZZARIA : return new PizzariaDelivery();
 			case CALZONERIA : return new CalzoneriaDelivery();
