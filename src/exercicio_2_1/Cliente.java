@@ -9,6 +9,8 @@ public class Cliente {
 		
 		nomes.add("Mariana Palmeira");
 		nomes.add("Palmeira, Mariana");
+		nomes.add("Wellington Almeida");
+		nomes.add("Almeida, Wellington");
 		
 		NameParserCreator parser;
 		
