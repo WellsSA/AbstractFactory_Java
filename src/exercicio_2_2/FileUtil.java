@@ -1,0 +1,75 @@
+package exercicio_2_2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+public class FileUtil {
+	public static String BASEDIR = Paths.get("").toAbsolutePath().toString();
+	public String WORKDIR = BASEDIR + File.separatorChar;
+	
+	public FileUtil() {
+		this.WORKDIR = BASEDIR + File.separatorChar;
+	}
+	
+	public FileUtil(String... dirs) {
+		String workdir = "";
+		for(String dir: dirs) workdir+= dir + File.separatorChar;
+		this.WORKDIR = BASEDIR + File.separatorChar + workdir;
+	}
+	
+	public File createFileIfNotExists(String filename) {
+		try {
+			File myObj = new File(WORKDIR + filename + ".txt");
+			if (myObj.createNewFile()) {
+				System.out.println("File created: " + myObj.getName());
+			} else {
+				System.out.println("File already exists: " + myObj.getName());
+			}
+
+			return myObj;
+		} catch (IOException e) {
+			System.out.println("FileUtil@createFileIfNotExists: An error occurred.");
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public boolean writeToFile(File file, String message) {
+		try {
+			FileWriter myWriter = new FileWriter(file);
+			myWriter.write(message);
+			myWriter.close();
+			System.out.println("Successfully wrote to the file.");
+			return true;
+		} catch (IOException e) {
+			System.out.println("FileUtil@writeToFile: An error occurred.");
+			e.printStackTrace();
+		}
+
+		return false;
+	}
+	
+	public String readFromFile(File file) {
+		try {
+		      File myObj = new File(WORKDIR + "publico" + ".txt");
+		      Scanner myReader = new Scanner(myObj);
+		      String data = "";
+		      while (myReader.hasNextLine()) {
+		        data += myReader.nextLine();
+		      }
+		      myReader.close();
+		      
+		      return data;
+		    } catch (FileNotFoundException e) {
+		      System.out.println("FileUtil@readFromFile: An error occurred.");
+		      e.printStackTrace();
+		    }
+		
+		return "An error occured while trying to read file";
+	}
+}

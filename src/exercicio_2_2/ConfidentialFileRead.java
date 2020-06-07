@@ -6,6 +6,9 @@ public class ConfidentialFileRead implements FileRead {
 
 	@Override
 	public String read() {
-		return "arquivo confidencial";
+		System.out.println("Reading confidential file");
+		FileUtil fUtil = new FileUtil("src", "exercicio_2_2");
+		File file = fUtil.createFileIfNotExists("confidencial");
+		return fUtil.readFromFile(file);
 	}
 }

@@ -15,7 +15,7 @@ public class Main {
 		FileRead fileRead = (new FileReadFactory()).getFileReadInstance(kind);
 
 		if (fileRead != null) {
-			System.out.println(fileRead.read());
+			System.out.println("FileReaderOutput: " + fileRead.read());
 		} else {
 			System.out.println("Nenhum parametro especificado");
 		}
