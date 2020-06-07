@@ -3,7 +3,7 @@ package exercicio_4_2;
 public class Cliente {
 	private SomadorEsperado somador;
 
-	private Cliente(SomadorEsperado somador) {
+	public Cliente(SomadorEsperado somador) {
 		this.somador = somador;
 	}
 
