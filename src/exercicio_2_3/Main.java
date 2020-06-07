@@ -5,9 +5,6 @@ public class Main {
 		
 		String message = "";
 		
-		System.out.println(args.length);
-		System.out.println(args[0]);
-		
 		int kind = args.length != 0 ? 
 				args[0].equals("arquivo") ? OutputFactory.FILE : 
 				args[0].equals("console") ? OutputFactory.CONSOLE : -1 
