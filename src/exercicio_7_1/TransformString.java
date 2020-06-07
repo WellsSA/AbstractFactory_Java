@@ -10,15 +10,19 @@ public abstract class TransformString {
 	}
 	
 	public String readString() {
-		System.out.println("Lendo string");
-		
-		return "teste teste";
+		System.out.println("------ Reading string ------");
+		String inputString = "Teste Teste";
+		System.out.println(inputString);
+		System.out.println("-----------------------------");
+		return inputString;
 	}
 	
 	public abstract String transformTo(String str);
 	
 	public void printString(String str) {
-		System.out.println("Printando string");
+		System.out.println("------ Printing string ------");
+		System.out.println(str);
+		System.out.println("-----------------------------");
 	}
 	
 }
