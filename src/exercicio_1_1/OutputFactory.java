@@ -2,8 +2,8 @@ package exercicio_1_1;
 
 public class OutputFactory implements Factory {
 
-	public static final int CONSOLE = 1;
-	public static final int FILE = 2;
+	public static final int CONSOLE = 0;
+	public static final int FILE = 1;
 
 	@Override
 	public Output getOutputInstance(int kind) {
