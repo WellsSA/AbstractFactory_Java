@@ -9,8 +9,7 @@ public class FileOutput implements Output {
 		System.out.println("Printing to file");
 		FileUtil fUtil = new FileUtil("src", "exercicio_1_1");
 		File file = fUtil.createFileIfNotExists("test");
-		System.out.println(file);
-		fUtil.writeToFile(file.getName(), message);
+		fUtil.writeToFile(file, message);
 		System.out.println(message);
 	}
 }

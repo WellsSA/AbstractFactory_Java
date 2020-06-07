@@ -37,9 +37,9 @@ public class FileUtil {
 		return null;
 	}
 
-	public boolean writeToFile(String filename, String message) {
+	public boolean writeToFile(File file, String message) {
 		try {
-			FileWriter myWriter = new FileWriter(filename);
+			FileWriter myWriter = new FileWriter(file);
 			myWriter.write(message);
 			myWriter.close();
 			System.out.println("Successfully wrote to the file.");
