@@ -26,7 +26,7 @@ public class FileUtil {
 			if (myObj.createNewFile()) {
 				System.out.println("File created: " + myObj.getName());
 			} else {
-				System.out.println("File already exists.");
+				System.out.println("File already exists: " + myObj.getName());
 			}
 
 			return myObj;

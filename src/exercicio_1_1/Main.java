@@ -7,10 +7,7 @@ public class Main {
 		
 		String message = "I'll print it!";
 		Random random = new Random();
-		//int kind = random.nextInt(2);
-		int kind = OutputFactory.FILE;
-		
-		System.out.println(kind);
+		int kind = random.nextInt(2);
 		
 		Output outputFactory = (new OutputFactory()).getOutputInstance(kind);
 		
