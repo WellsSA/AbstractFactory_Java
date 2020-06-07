@@ -56,7 +56,7 @@ public class FileUtil {
 	
 	public String readFromFile(File file) {
 		try {
-		      File myObj = new File(WORKDIR + "publico" + ".txt");
+		      File myObj = file;
 		      Scanner myReader = new Scanner(myObj);
 		      String data = "";
 		      while (myReader.hasNextLine()) {

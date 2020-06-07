@@ -4,7 +4,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		System.out.println(args.length);
-		String password = "desi gnpatt er ns";
+		String password = "desi gnpatt er ns2";
 
 		int kind = FileReadFactory.PUBLIC;
 
