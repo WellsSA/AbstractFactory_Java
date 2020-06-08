@@ -1,5 +1,7 @@
 package exercicio_7_1;
 
+import java.util.Scanner;
+
 public abstract class TransformString {
 
 	public String transform() {
@@ -11,8 +13,13 @@ public abstract class TransformString {
 	
 	public String readString() {
 		System.out.println("------ Reading string ------");
-		String inputString = "Teste Teste";
+		
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Insert your text here: ");
+		String inputString = scanner.next();
 		System.out.println(inputString);
+		
 		System.out.println("-----------------------------");
 		return inputString;
 	}
