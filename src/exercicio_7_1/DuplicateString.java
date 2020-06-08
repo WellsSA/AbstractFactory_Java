@@ -1,8 +1,8 @@
 package exercicio_7_1;
 
-public class Lowercase extends TransformString {
+public class DuplicateString extends TransformString {
 	@Override
 	public String transformTo(String str) {
-		return str.toLowerCase();
+		return str + str;
 	}
 }

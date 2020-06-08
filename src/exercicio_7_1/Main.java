@@ -6,10 +6,16 @@ public class Main {
 
 		TransformString ts;
 		
-		ts = new Uppercase();
+		ts = new UppercaseString();
 		StringTransformer.transform(ts);
 		
-		ts = new Lowercase();
+		ts = new LowercaseString();
+		StringTransformer.transform(ts);
+		
+		ts = new DuplicateString();
+		StringTransformer.transform(ts);
+		
+		ts = new InvertString();
 		StringTransformer.transform(ts);
 	}
 
